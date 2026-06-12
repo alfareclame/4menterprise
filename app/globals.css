@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-havennacht: #101c28;
+  --color-beton: #edf0f2;
+  --color-wit: #fbfcfd;
+  --color-kraan: #e8590c;
+  --color-kraan-diep: #c24a05;
+  --color-staal: #51616f;
+  --color-staal-licht: #9db0bd;
+  --color-lijn: #c9d1d7;
+
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-archivo);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-beton);
+  color: var(--color-havennacht);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* sticky nav is 4rem high; keep anchored headings visible below it */
+section[id] {
+  scroll-margin-top: calc(4rem + 16px);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-kraan);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-kraan);
+  color: var(--color-wit);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-staal);
+}
