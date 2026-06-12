@@ -7,8 +7,8 @@ const stagger = (index: number) => ({ animationDelay: `${index * 90}ms` });
 
 export default function Hero() {
   return (
-    <section id="hero" className="overflow-hidden">
-      <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 pt-[clamp(3rem,8vw,6rem)] pb-[clamp(4rem,10vw,8rem)] lg:grid-cols-[1.1fr_1fr]">
+    <section id="hero" className="blueprint-grid overflow-hidden">
+      <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 pt-[clamp(3rem,8vw,6rem)] pb-[clamp(3rem,7vw,5rem)] lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="eyebrow hero-fade" style={stagger(0)}>
             {hero.eyebrow}
@@ -35,6 +35,24 @@ export default function Hero() {
           </div>
         </div>
         <VentureMap />
+      </div>
+      {/* feitenstrook — alle waarden verifieerbaar */}
+      <div className="hero-fade border-t border-lijn" style={stagger(4)}>
+        <dl className="mx-auto grid max-w-[1200px] grid-cols-2 gap-px px-6 md:grid-cols-4">
+          {hero.stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-col-reverse gap-1 border-r border-lijn py-6 pr-6 last:border-r-0 md:py-8"
+            >
+              <dt className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-staal">
+                {stat.label}
+              </dt>
+              <dd className="font-display text-3xl font-extrabold md:text-4xl">
+                {stat.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

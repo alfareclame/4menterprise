@@ -7,11 +7,12 @@ export default function Innovatie() {
   return (
     <section
       id="innovatie"
-      className="bg-havennacht py-[clamp(4rem,10vw,8rem)] text-wit"
+      className="blueprint-grid-dark bg-havennacht py-[clamp(4rem,10vw,8rem)] text-wit"
     >
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeading
           dark
+          index="03"
           eyebrow={innovatieIntro.eyebrow}
           title={innovatieIntro.h2}
           intro={innovatieIntro.intro}

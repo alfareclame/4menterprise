@@ -7,6 +7,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-lijn py-[clamp(4rem,10vw,8rem)]">
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeading
+          index="05"
           eyebrow={contact.eyebrow}
           title={contact.h2}
           intro={contact.body}

@@ -5,6 +5,12 @@ export const hero = {
     'Van gevelreclame tot AI-agents en laadinfrastructuur. 4M Enterprise is het dak boven alles wat ik bouw: vier bedrijven, twee innovatieprojecten, één ingenieur.',
   primaryCta: { label: 'Bekijk de bedrijven', href: '#ventures' },
   secondaryCta: { label: 'Neem contact op', href: '#contact' },
+  stats: [
+    { value: '04', label: 'Bedrijven' },
+    { value: '02', label: 'Innovatieprojecten' },
+    { value: '01', label: 'KvK-inschrijving' },
+    { value: '24/7', label: 'AI-receptionist live' },
+  ],
 } as const;
 
 export const verhaal = {
@@ -16,6 +22,39 @@ export const verhaal = {
     'Die lessen werden software. FleetTrack Holland geeft wagenparkbeheerders grip op hun voertuigen. AanloopAI zet AI-receptionisten in die voor ondernemers de telefoon en WhatsApp afhandelen, dag en nacht. PiekAI, nu in ontwikkeling, maakt bedrijven vindbaar in het AI-tijdperk.',
     'En daarnaast onderzoek ik wat er hierna komt: laadpunten in straatverlichting, automatische schadedetectie na een aanrijding. Dezelfde aanpak in elk project: eerst analyseren, dan bouwen, dan bewijzen. Vanuit Rotterdam — waar je aan een half woord genoeg hebt.',
   ],
+  datasheet: {
+    title: 'Datasheet',
+    rows: [
+      { key: 'Naam', value: 'Mustafa Doğan' },
+      { key: 'Rol', value: 'Oprichter & ingenieur' },
+      { key: 'Opleiding', value: 'BSc Computer Engineering' },
+      { key: 'Basis', value: 'Rotterdam, Nederland' },
+      { key: 'KvK', value: '88606902' },
+      { key: 'Bedrijven', value: '4' },
+      { key: 'R&D-projecten', value: '2' },
+    ],
+  },
+  traject: {
+    title: 'Het traject',
+    steps: [
+      {
+        title: 'Fysiek vakwerk',
+        body: 'Met Alfa Reclame begon het tastbaar: gevels, autobelettering en complete huisstijlen voor ondernemers in Rotterdam en omstreken.',
+      },
+      {
+        title: 'Van werkplaats naar software',
+        body: 'De lessen uit het mkb werden product. FleetTrack Holland geeft wagenparkbeheerders grip op hun voertuigen.',
+      },
+      {
+        title: 'AI die werk afhandelt',
+        body: 'AanloopAI zet AI-receptionisten in die telefoon en WhatsApp overnemen — dag en nacht, zonder wachtrij.',
+      },
+      {
+        title: 'Onderzoek naar wat hierna komt',
+        body: 'PiekAI in ontwikkeling. Daarnaast R&D: laadpunten in straatverlichting en automatische schadedetectie.',
+      },
+    ],
+  },
 } as const;
 
 export const venturesIntro = {
