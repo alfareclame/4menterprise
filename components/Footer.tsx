@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { footer } from '@/content/copy';
 
 // vastgelegd op buildtijd — statische export, dus geen hydration-verschil
@@ -27,12 +28,12 @@ export default function Footer() {
           ))}
         </ul>
         <div className="md:text-right">
-          <a
+          <Link
             href="/privacy/"
             className="text-sm font-medium transition-colors duration-150 hover:text-kraan-diep"
           >
             {footer.privacyLabel}
-          </a>
+          </Link>
         </div>
       </div>
       <div className="border-t border-lijn">

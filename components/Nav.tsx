@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { site } from '@/content/site';
 
@@ -76,14 +77,14 @@ export default function Nav() {
         aria-label="Hoofdnavigatie"
         className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-6"
       >
-        <a href="/" className="flex items-center gap-2" aria-label="4M Enterprise — home">
+        <Link href="/" className="flex items-center gap-2" aria-label="4M Enterprise — home">
           <span className="inline-flex items-center justify-center rounded-[2px] border-[1.5px] border-havennacht px-1.5 py-0.5 font-display text-sm font-extrabold leading-none">
             4M
           </span>
           <span className="font-mono text-sm font-medium tracking-[0.12em]">
             Enterprise
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           {site.nav.map((item) => (

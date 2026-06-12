@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from '@/content/copy';
 
 export const metadata: Metadata = {
@@ -17,9 +18,9 @@ export default function NotFound() {
         {notFound.heading}
       </h1>
       <p className="mt-4 text-staal">{notFound.line}</p>
-      <a href="/" className="btn-primary mt-8">
+      <Link href="/" className="btn-primary mt-8">
         {notFound.button}
-      </a>
+      </Link>
     </main>
   );
 }

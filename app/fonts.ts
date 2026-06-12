@@ -1,9 +1,9 @@
 import { Archivo, Bricolage_Grotesque, IBM_Plex_Mono } from 'next/font/google';
 
 // latin-ext is verplicht: "Doğan" moet in alle drie de fonts correct renderen
+// Bricolage als variable font: dekt 600–800, dus ook de H2 op gewicht 700
 export const bricolage = Bricolage_Grotesque({
   subsets: ['latin', 'latin-ext'],
-  weight: ['600', '800'],
   variable: '--font-bricolage',
   display: 'swap',
 });
