@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- bron voor app/opengraph-image.png — render op exact 1200×630 (zie scripts/generate-og.mjs) -->
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=IBM+Plex+Mono:wght@500&display=block" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #EDF0F2;
+    color: #101C28;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 72px 80px;
+  }
+  .wordmark { display: flex; align-items: center; gap: 14px; }
+  .wordmark .box {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1;
+    border: 2.5px solid #101C28;
+    border-radius: 2px;
+    padding: 7px 11px;
+  }
+  .wordmark .name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.12em;
+  }
+  h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 92px;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    max-width: 980px;
+  }
+  .accent { width: 120px; height: 8px; background: #E8590C; margin-top: 36px; }
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    color: #51616F;
+  }
+</style>
+</head>
+<body>
+  <div class="wordmark">
+    <span class="box">4M</span>
+    <span class="name">Enterprise</span>
+  </div>
+  <div>
+    <h1>Ik bouw bedrijven in Rotterdam.</h1>
+    <div class="accent"></div>
+  </div>
+  <div class="meta">4MENTERPRISE.NL — ROTTERDAM — KVK 88606902</div>
+</body>
+</html>

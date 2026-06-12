@@ -56,6 +56,7 @@ export const ventures: Venture[] = [
       'Lancering volgt — de fundering wordt nu gelegd',
     ],
     status: 'In ontwikkeling',
-    url: 'https://piekai.nl',
+    // piekai.nl resolveert nog niet (NXDOMAIN, gecheckt 2026-06-12) — geen link tot livegang
+    url: null,
   },
 ];

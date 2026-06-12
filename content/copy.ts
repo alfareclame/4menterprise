@@ -65,10 +65,10 @@ export const contact = {
 export const footer = {
   left: '4M Enterprise — Rotterdam',
   kvk: 'KvK 88606902',
+  // piekai.nl ontbreekt bewust: domein resolveert nog niet (zie tasks/decisions.md)
   links: [
     { label: 'alfareclame.nl', url: 'https://alfareclame.nl' },
     { label: 'aanloopai.nl', url: 'https://aanloopai.nl' },
-    { label: 'piekai.nl', url: 'https://piekai.nl' },
   ],
   privacyLabel: 'Privacy',
   bottom: (year: number) => `© ${year} 4M Enterprise. Gebouwd in Rotterdam.`,
