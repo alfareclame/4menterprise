@@ -2,24 +2,24 @@ export const hero = {
   eyebrow: '4M ENTERPRISE — ROTTERDAM — KVK 88606902',
   h1: 'Ik bouw bedrijven in Rotterdam.',
   subline:
-    'Van gevelreclame tot AI-agents en laadinfrastructuur. 4M Enterprise is het dak boven alles wat ik bouw: vier bedrijven, twee innovatieprojecten, één ingenieur.',
+    'Van AI-agents tot laadinfrastructuur. 4M Enterprise is het dak boven alles wat ik bouw: twee bedrijven, twee innovatieprojecten, één ingenieur.',
   primaryCta: { label: 'Bekijk de bedrijven', href: '#ventures' },
   secondaryCta: { label: 'Neem contact op', href: '#contact' },
   stats: [
-    { value: '04', label: 'Bedrijven' },
+    { value: '02', label: 'Bedrijven' },
     { value: '02', label: 'Innovatieprojecten' },
     { value: '01', label: 'KvK-inschrijving' },
-    { value: '24/7', label: 'AI-receptionist live' },
+    { value: '24/7', label: 'AI-agents actief' },
   ],
 } as const;
 
 export const verhaal = {
   eyebrow: 'HET VERHAAL',
-  h2: 'Eén ingenieur, vier bedrijven.',
+  h2: 'Eén ingenieur, meerdere projecten.',
   paragraphs: [
-    'Ik ben Mustafa Doğan, computer engineer en ondernemer in Rotterdam. 4M Enterprise is geen holding met een kantoorpand en een managementlaag — het is de naam boven mijn werk. Eén KvK-inschrijving, één verantwoordelijke, meerdere bedrijven.',
-    "Het begon fysiek: met Alfa Reclame maak ik gevels, autobelettering en complete huisstijlen voor ondernemers in Rotterdam en omstreken. Daar leerde ik wat mkb'ers echt nodig hebben — en waar ze tijd verliezen.",
-    'Die lessen werden software. FleetTrack Holland geeft wagenparkbeheerders grip op hun voertuigen. AanloopAI zet AI-receptionisten in die voor ondernemers de telefoon en WhatsApp afhandelen, dag en nacht. PiekAI, nu in ontwikkeling, maakt bedrijven vindbaar in het AI-tijdperk.',
+    'Ik ben Mustafa Doğan, computer engineer en ondernemer in Rotterdam. 4M Enterprise is geen holding met een kantoorpand en een managementlaag — het is de naam boven mijn werk. Eén KvK-inschrijving, één verantwoordelijke, meerdere projecten.',
+    'De rode draad is software die werk uit handen neemt. Met AanloopAI zet ik AI-receptionisten in die voor ondernemers de telefoon en WhatsApp afhandelen, dag en nacht. Leads worden gekwalificeerd en direct doorgestuurd — als maandelijkse dienst, van implementatie tot beheer.',
+    'PiekAI, nu in ontwikkeling, pakt de volgende verschuiving: bedrijven vindbaar maken in AI-zoekmachines en -assistenten, voor groeibedrijven die verder kijken dan de klassieke zoekmachine.',
     'En daarnaast onderzoek ik wat er hierna komt: laadpunten in straatverlichting, automatische schadedetectie na een aanrijding. Dezelfde aanpak in elk project: eerst analyseren, dan bouwen, dan bewijzen. Vanuit Rotterdam — waar je aan een half woord genoeg hebt.',
   ],
   datasheet: {
@@ -30,7 +30,7 @@ export const verhaal = {
       { key: 'Opleiding', value: 'BSc Computer Engineering' },
       { key: 'Basis', value: 'Rotterdam, Nederland' },
       { key: 'KvK', value: '88606902' },
-      { key: 'Bedrijven', value: '4' },
+      { key: 'Bedrijven', value: '2' },
       { key: 'R&D-projecten', value: '2' },
     ],
   },
@@ -38,20 +38,20 @@ export const verhaal = {
     title: 'Het traject',
     steps: [
       {
-        title: 'Fysiek vakwerk',
-        body: 'Met Alfa Reclame begon het tastbaar: gevels, autobelettering en complete huisstijlen voor ondernemers in Rotterdam en omstreken.',
+        title: 'AI-agents in productie',
+        body: 'AanloopAI is actief: AI-receptionisten die 24/7 telefoon en WhatsApp afhandelen voor het Nederlandse mkb.',
       },
       {
-        title: 'Van werkplaats naar software',
-        body: 'De lessen uit het mkb werden product. FleetTrack Holland geeft wagenparkbeheerders grip op hun voertuigen.',
+        title: 'Vindbaarheid in het AI-tijdperk',
+        body: 'PiekAI is in ontwikkeling: zichtbaarheid in AI-zoekmachines en -assistenten (GEO) voor groeibedrijven.',
       },
       {
-        title: 'AI die werk afhandelt',
-        body: 'AanloopAI zet AI-receptionisten in die telefoon en WhatsApp overnemen — dag en nacht, zonder wachtrij.',
+        title: 'Laadinfrastructuur',
+        body: 'Conceptfase: projectvoorstel voor laadpunten in bestaande straatverlichting, gericht op Gemeente Rotterdam.',
       },
       {
-        title: 'Onderzoek naar wat hierna komt',
-        body: 'PiekAI in ontwikkeling. Daarnaast R&D: laadpunten in straatverlichting en automatische schadedetectie.',
+        title: 'Schadedetectie',
+        body: 'R&D: computer vision die voertuigschade na een aanrijding detecteert, lokaliseert en classificeert.',
       },
     ],
   },
@@ -59,7 +59,7 @@ export const verhaal = {
 
 export const venturesIntro = {
   eyebrow: 'DE BEDRIJVEN',
-  h2: 'Vier bedrijven, één aanpak.',
+  h2: 'Twee bedrijven, één aanpak.',
   intro: 'Elk bedrijf lost één concreet probleem op voor Nederlandse ondernemers.',
 } as const;
 
@@ -80,7 +80,7 @@ export const werkwijze = {
     },
     {
       title: 'Bewijzen, niet beloven.',
-      body: 'Een functie is pas af als die aantoonbaar werkt. Dat geldt voor software, voor reclame en voor deze site.',
+      body: 'Een functie is pas af als die aantoonbaar werkt. Dat geldt voor software, voor AI-agents en voor deze site.',
     },
     {
       title: 'Eén verantwoordelijke.',
@@ -104,11 +104,7 @@ export const contact = {
 export const footer = {
   left: '4M Enterprise — Rotterdam',
   kvk: 'KvK 88606902',
-  // piekai.nl ontbreekt bewust: domein resolveert nog niet (zie tasks/decisions.md)
-  links: [
-    { label: 'alfareclame.nl', url: 'https://alfareclame.nl' },
-    { label: 'aanloopai.nl', url: 'https://aanloopai.nl' },
-  ],
+  links: [{ label: 'aanloopai.nl', url: 'https://aanloopai.nl' }],
   privacyLabel: 'Privacy',
   bottom: (year: number) => `© ${year} 4M Enterprise. Gebouwd in Rotterdam.`,
 } as const;

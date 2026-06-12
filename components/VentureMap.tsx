@@ -10,8 +10,6 @@ interface Branch {
 }
 
 const BRANCHES: Branch[] = [
-  { id: 'alfa', label: 'ALFA RECLAME', dashed: false, href: '#ventures' },
-  { id: 'fleettrack', label: 'FLEETTRACK', dashed: false, href: '#ventures' },
   { id: 'aanloopai', label: 'AANLOOPAI', dashed: false, href: '#ventures' },
   { id: 'piekai', label: 'PIEKAI', dashed: false, href: '#ventures' },
   { id: 'laadpunten', label: 'LAADPUNTEN', dashed: true, href: null },
@@ -20,22 +18,20 @@ const BRANCHES: Branch[] = [
 
 // orthogonale "circuit-trace" routing met 45°-chamfers, vanaf de node (90,240)
 const DESKTOP_PATHS = [
-  'M116 240 H164 L176 228 V52 L188 40 H400',
-  'M116 240 H188 L200 228 V132 L212 120 H400',
-  'M116 240 H212 L224 228 V212 L236 200 H400',
-  'M116 240 H236 L248 252 V268 L260 280 H400',
-  'M116 240 H260 L272 252 V348 L284 360 H400',
-  'M116 240 H284 L296 252 V428 L308 440 H400',
+  'M116 240 H178 L190 228 V112 L202 100 H400',
+  'M116 240 H208 L220 228 V202 L232 190 H400',
+  'M116 240 H238 L250 252 V278 L262 290 H400',
+  'M116 240 H268 L280 252 V368 L292 380 H400',
 ];
-const DESKTOP_Y = [40, 120, 200, 280, 360, 440];
+const DESKTOP_Y = [100, 190, 290, 380];
 
 // mobiel: vereenvoudigde verticale routing — node boven, ladder eronder
-const MOBILE_Y = [140, 212, 284, 356, 428, 500];
-const MOBILE_TRUNK_SOLID = 'M48 70 V356';
-const MOBILE_TRUNK_DASHED = 'M48 356 V500';
+const MOBILE_Y = [150, 240, 330, 420];
+const MOBILE_TRUNK_SOLID = 'M48 70 V240';
+const MOBILE_TRUNK_DASHED = 'M48 240 V420';
 
 const ARIA_LABEL =
-  'Schema: één centrale node (M) met zes vertakkingen — Alfa Reclame, FleetTrack, AanloopAI en PiekAI (actief), Laadpunten en Schadedetectie (in onderzoek)';
+  'Schema: één centrale node (M) met vier vertakkingen — AanloopAI (actief) en PiekAI (in ontwikkeling), plus Laadpunten en Schadedetectie (in onderzoek)';
 
 export default function VentureMap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -166,7 +162,7 @@ export default function VentureMap() {
 
       {/* mobiel: volle breedte onder de hero-tekst, verticale routing */}
       <svg
-        viewBox="0 0 360 560"
+        viewBox="0 0 360 470"
         role="img"
         aria-label={ARIA_LABEL}
         className="w-full md:hidden"
@@ -187,7 +183,7 @@ export default function VentureMap() {
           stroke="var(--color-havennacht)"
           strokeWidth={1.5}
           strokeDasharray="3 6"
-          style={fadeStyle(7)}
+          style={fadeStyle(5)}
         />
         {BRANCHES.map((branch, index) => (
           <path

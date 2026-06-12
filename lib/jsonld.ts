@@ -5,7 +5,7 @@ const ORG_ID = `${site.url}/#organization`;
 const WEBSITE_ID = `${site.url}/#website`;
 
 // sameAs bevat alleen domeinen die live zijn (piekai.nl nog niet — zie tasks/decisions.md)
-const SAME_AS = ['https://alfareclame.nl', 'https://aanloopai.nl'];
+const SAME_AS = ['https://aanloopai.nl'];
 
 const ROTTERDAM = {
   '@type': 'PostalAddress',

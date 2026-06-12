@@ -2,19 +2,14 @@
 
 > 4M Enterprise is het persoonlijke ondernemingsmerk van Mustafa Doğan,
 > computer engineer (BSc) en ondernemer in Rotterdam, Nederland.
-> Eén KvK-inschrijving (88606902), meerdere bedrijven, één werkwijze:
+> Eén KvK-inschrijving (88606902), meerdere projecten, één werkwijze:
 > eerst analyseren, dan bouwen, dan bewijzen.
 
 ## Bedrijven
 
-- [Alfa Reclame](https://alfareclame.nl): Full-service reclamebureau in
-  Rotterdam — gevelreclame, lichtreclame, autobelettering, drukwerk,
-  websites, SEO en Google Ads. Met Marco, een Nederlandstalige
-  AI-receptionist, live op de site.
-- FleetTrack Holland: GPS-voertuigvolgsysteem (SaaS) voor Nederlandse
-  wagenparken — live tracking, ritregistratie, rapportages.
 - [AanloopAI](https://aanloopai.nl): AI-receptionisten (voice en WhatsApp)
-  voor het Nederlandse mkb, 24/7, inclusief leadkwalificatie.
+  voor het Nederlandse mkb, 24/7, inclusief leadkwalificatie. Van
+  implementatie tot beheer, als maandelijkse dienst.
 - PiekAI: platform voor vindbaarheid in AI-zoekmachines
   (GEO) voor groeibedrijven. Status: in ontwikkeling.
 

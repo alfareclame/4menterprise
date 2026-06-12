@@ -10,7 +10,7 @@ export const site = {
   meta: {
     title: '4M Enterprise | Ondernemer & ingenieur in Rotterdam — Mustafa Doğan',
     description:
-      'Het ondernemingsmerk van Mustafa Doğan in Rotterdam: Alfa Reclame, FleetTrack Holland, AanloopAI en PiekAI — plus innovatie in laadinfrastructuur en AI.',
+      'Het ondernemingsmerk van Mustafa Doğan in Rotterdam: AI-agents met AanloopAI, vindbaarheid met PiekAI en innovatie in laadinfrastructuur en schadedetectie.',
   },
   nav: [
     { label: 'Het verhaal', href: '#verhaal' },

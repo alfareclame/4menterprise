@@ -1,67 +1,17 @@
 export type VentureStatus = 'Actief' | 'In ontwikkeling';
 
 export interface Venture {
-  id: string; // 'alfa' | 'fleettrack' | 'aanloopai' | 'piekai'
+  id: string; // 'aanloopai' | 'piekai'
   name: string;
   tagline: string; // one line, max ~60 chars
   bullets: [string, string, string];
-  beschrijving: string; // volledige omschrijving (feiten uit spec §2.1)
+  beschrijving: string; // volledige omschrijving
   diensten: string[]; // dienst-chips
   status: VentureStatus;
-  url: string | null; // null = render name without hyperlink (FleetTrack)
+  url: string | null; // null = render name without hyperlink
 }
 
 export const ventures: Venture[] = [
-  {
-    id: 'alfa',
-    name: 'Alfa Reclame',
-    tagline: 'Full-service reclamebureau in Rotterdam — van gevel tot Google.',
-    bullets: [
-      'Gevelreclame, lichtreclame, autobelettering en drukwerk',
-      'Websites, SEO, Google Ads en grafisch ontwerp',
-      'Marco, de AI-receptionist, beantwoordt bezoekers 24/7',
-    ],
-    beschrijving:
-      'Mijn eerste bedrijf en de fysieke basis van alles wat daarna kwam. Fysiek werk — gevels, autobelettering, borden — gecombineerd met digitaal: websites, vindbaarheid en campagnes. Op de site staat Marco, een Nederlandstalige AI-receptionist die bezoekers 24/7 beantwoordt en leads direct doorzet.',
-    diensten: [
-      'Gevelreclame',
-      'Lichtreclame & LED',
-      'Autobelettering & carwrap',
-      'Raambelettering',
-      'Reclameborden',
-      'Spandoeken',
-      'Bewegwijzering',
-      'Drukwerk',
-      'Websites',
-      'SEO',
-      'Google Ads',
-      'Logo & grafisch ontwerp',
-      'Social media',
-    ],
-    status: 'Actief',
-    url: 'https://alfareclame.nl',
-  },
-  {
-    id: 'fleettrack',
-    name: 'FleetTrack Holland',
-    tagline: 'GPS-voertuigvolgsysteem voor Nederlandse wagenparken.',
-    bullets: [
-      'Live tracking en automatische ritregistratie',
-      'Rapportages voor beheer en administratie',
-      'Bewezen 4G-trackerhardware, geleverd en geïnstalleerd',
-    ],
-    beschrijving:
-      'GPS-voertuigvolgsysteem (SaaS) voor Nederlandse ondernemers en wagenparkbeheerders. Live tracking, automatische ritregistratie en rapportages voor beheer en administratie — op bewezen 4G-trackerhardware, geleverd en geïnstalleerd.',
-    diensten: [
-      'Live tracking',
-      'Ritregistratie',
-      'Rapportages',
-      '4G-trackerhardware',
-      'Wagenparkbeheer',
-    ],
-    status: 'Actief',
-    url: null,
-  },
   {
     id: 'aanloopai',
     name: 'AanloopAI',
