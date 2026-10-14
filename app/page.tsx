@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Verhaal from '@/components/Verhaal';
-import Ventures from '@/components/Ventures';
+import Groep from '@/components/Groep';
 import Innovatie from '@/components/Innovatie';
 import Werkwijze from '@/components/Werkwijze';
 import Contact from '@/components/Contact';
@@ -18,8 +18,8 @@ export default function Home() {
       <Nav />
       <main id="main">
         <Hero />
+        <Groep />
         <Verhaal />
-        <Ventures />
         <Innovatie />
         <Werkwijze />
         <Contact />

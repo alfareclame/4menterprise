@@ -6,6 +6,7 @@
   --color-wit: #fbfcfd;
   --color-kraan: #e8590c;
   --color-kraan-diep: #c24a05;
+  --color-kraan-licht: #f28a4b; /* kraan-tekst op havennacht: ≥ 6:1 */
   --color-staal: #51616f;
   --color-staal-licht: #9db0bd;
   --color-lijn: #c9d1d7;
@@ -111,6 +112,61 @@ section[id] {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* spotlight-kaart: gloed volgt de cursor (--sx/--sy gezet in BedrijfCard) */
+.spotlight {
+  isolation: isolate;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    320px circle at var(--sx, 50%) var(--sy, 0%),
+    rgba(232, 89, 12, 0.55),
+    transparent 70%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--sx, 50%) var(--sy, 0%),
+    rgba(232, 89, 12, 0.05),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+
+.spotlight:hover::before,
+.spotlight:hover::after {
+  opacity: 1;
+}
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .spotlight::before,
+  .spotlight::after {
+    display: none;
   }
 }
 

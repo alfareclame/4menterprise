@@ -1,11 +1,23 @@
+import { bedrijven, divisies } from '@/content/groep';
 import { site } from '@/content/site';
 
 const PERSON_ID = `${site.url}/#person`;
 const ORG_ID = `${site.url}/#organization`;
 const WEBSITE_ID = `${site.url}/#website`;
 
-// sameAs bevat alleen domeinen die live zijn (piekai.nl nog niet — zie tasks/decisions.md)
-const SAME_AS = ['https://aanloopai.nl'];
+// alleen bedrijven met een live domein (piekai.nl nog niet — zie tasks/decisions.md)
+const LIVE = bedrijven.filter((b): b is typeof b & { url: string } => b.url !== null);
+const SAME_AS = LIVE.map((b) => b.url);
+
+const SUB_ORGANIZATIONS = LIVE.map((b) => ({
+  '@type': 'Organization',
+  '@id': `${b.url}/#organization`,
+  name: b.naam,
+  url: b.url,
+  description: b.tagline,
+  knowsAbout: divisies.find((d) => d.id === b.divisie)?.naam,
+  parentOrganization: { '@id': ORG_ID },
+}));
 
 const ROTTERDAM = {
   '@type': 'PostalAddress',
@@ -39,7 +51,9 @@ export function buildJsonLd() {
           value: site.kvk,
         },
         email: site.email,
+        description: site.meta.description,
         address: ROTTERDAM,
+        subOrganization: SUB_ORGANIZATIONS,
       },
       {
         '@type': 'WebSite',

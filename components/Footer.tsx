@@ -1,44 +1,106 @@
 import Link from 'next/link';
 import { footer } from '@/content/copy';
+import { bedrijvenVan, divisies, hostname } from '@/content/groep';
+import { site } from '@/content/site';
 
 // vastgelegd op buildtijd — statische export, dus geen hydration-verschil
 const year = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="border-t border-lijn bg-wit">
-      <div className="mx-auto grid max-w-[1200px] items-start gap-8 px-6 py-10 md:grid-cols-3">
+    <footer className="blueprint-grid-dark bg-havennacht text-beton">
+      <div className="mx-auto grid max-w-[1200px] gap-12 px-6 pt-16 pb-12 lg:grid-cols-[18rem_1fr]">
+        {/* moederbedrijf */}
         <div>
-          <p className="font-medium">{footer.left}</p>
-          <p className="mt-1 font-mono text-sm text-staal">{footer.kvk}</p>
+          <Link href="/" className="inline-flex items-center gap-2" aria-label="4M Enterprise — home">
+            <span className="inline-flex items-center justify-center rounded-[2px] border-[1.5px] border-wit px-1.5 py-0.5 font-display text-sm font-extrabold leading-none text-wit">
+              4M
+            </span>
+            <span className="font-mono text-sm font-medium tracking-[0.12em] text-wit">
+              Enterprise
+            </span>
+          </Link>
+          <p className="mt-5 max-w-[18rem] text-[0.95rem] leading-relaxed text-staal-licht">
+            {footer.pitch}
+          </p>
+          <dl className="mt-6 space-y-1.5 font-mono text-[13px]">
+            <div className="flex gap-3">
+              <dt className="text-staal-licht">KvK</dt>
+              <dd className="text-wit">{site.kvk}</dd>
+            </div>
+            <div className="flex gap-3">
+              <dt className="text-staal-licht">Mail</dt>
+              <dd>
+                <a href={`mailto:${site.email}`} className="text-wit transition-colors duration-150 hover:text-kraan">
+                  {site.email}
+                </a>
+              </dd>
+            </div>
+            <div className="flex gap-3">
+              <dt className="text-staal-licht">Basis</dt>
+              <dd className="text-wit">{site.city}, NL</dd>
+            </div>
+          </dl>
         </div>
-        <ul className="flex flex-wrap gap-x-6 gap-y-2">
-          {footer.links.map((link) => (
-            <li key={link.url}>
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium transition-colors duration-150 hover:text-kraan-diep"
-              >
-                {link.label}
-                <span className="sr-only"> (opent in nieuw tabblad)</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="md:text-right">
+
+        {/* de groep, per divisie */}
+        <nav aria-labelledby="footer-groep">
+          <h2 id="footer-groep" className="eyebrow !text-staal-licht">
+            {footer.groepTitel}
+          </h2>
+          <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-9 lg:grid-cols-3">
+            {divisies.map((divisie) => (
+              <div key={divisie.id}>
+                <a
+                  href={`/#divisie-${divisie.id}`}
+                  className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-kraan-licht transition-colors duration-150 hover:text-wit"
+                >
+                  {divisie.naam}
+                </a>
+                <ul className="mt-3 space-y-2.5">
+                  {bedrijvenVan(divisie.id).map((bedrijf) => (
+                    <li key={bedrijf.id}>
+                      {bedrijf.url ? (
+                        <a
+                          href={bedrijf.url}
+                          target="_blank"
+                          rel="noopener"
+                          className="group flex flex-col"
+                        >
+                          <span className="font-medium text-wit transition-colors duration-150 group-hover:text-kraan">
+                            {bedrijf.naam}
+                          </span>
+                          <span className="font-mono text-[12px] text-staal-licht">
+                            {hostname(bedrijf.url)} ↗
+                          </span>
+                          <span className="sr-only"> (opent in nieuw tabblad)</span>
+                        </a>
+                      ) : (
+                        <span className="flex flex-col">
+                          <span className="font-medium text-wit">{bedrijf.naam}</span>
+                          <span className="font-mono text-[12px] text-staal-licht">
+                            {bedrijf.status.toLowerCase()}
+                          </span>
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </nav>
+      </div>
+
+      <div className="border-t border-staal/60">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4 px-6 py-5">
+          <p className="font-mono text-xs text-staal-licht">{footer.bottom(year)}</p>
           <Link
             href="/privacy/"
-            className="text-sm font-medium transition-colors duration-150 hover:text-kraan-diep"
+            className="font-mono text-xs text-staal-licht transition-colors duration-150 hover:text-wit"
           >
             {footer.privacyLabel}
           </Link>
-        </div>
-      </div>
-      <div className="border-t border-lijn">
-        <div className="mx-auto max-w-[1200px] px-6 py-4">
-          <p className="font-mono text-xs text-staal">{footer.bottom(year)}</p>
         </div>
       </div>
     </footer>

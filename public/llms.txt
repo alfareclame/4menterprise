@@ -1,17 +1,42 @@
 # 4M Enterprise
 
-> 4M Enterprise is het persoonlijke ondernemingsmerk van Mustafa Doğan,
-> computer engineer (BSc) en ondernemer in Rotterdam, Nederland.
-> Eén KvK-inschrijving (88606902), meerdere projecten, één werkwijze:
-> eerst analyseren, dan bouwen, dan bewijzen.
+> 4M Enterprise is het moederbedrijf van een groep gespecialiseerde bedrijven,
+> gevestigd in Rotterdam, Nederland (KvK 88606902). Oprichter: Mustafa Doğan,
+> computer engineer (BSc) en ondernemer. Eerste bedrijf: Alfa Reclame (2012).
+> Werkwijze: eerst analyseren, dan bouwen, dan bewijzen.
 
-## Bedrijven
+## Bedrijven van de groep, per divisie
 
-- [AanloopAI](https://aanloopai.nl): AI-receptionisten (voice en WhatsApp)
-  voor het Nederlandse mkb, 24/7, inclusief leadkwalificatie. Van
-  implementatie tot beheer, als maandelijkse dienst.
-- PiekAI: platform voor vindbaarheid in AI-zoekmachines
-  (GEO) voor groeibedrijven. Status: in ontwikkeling.
+### Reclame & Signing
+- [Alfa Reclame](https://alfareclame.nl): reclamebureau in Rotterdam sinds 2012.
+  Ontwerp, productie en montage van gevelreclame, lichtreclame, doosletters,
+  raambelettering, autoreclame en reclameborden.
+
+### AI & Automatisering
+- [AanloopAI](https://aanloopai.nl): AI-receptioniste die 24/7 telefoon en
+  WhatsApp opneemt, leads kwalificeert en afspraken boekt; daarnaast websites
+  en maatwerk-automatisering voor het Nederlandse mkb.
+- PiekAI: vindbaarheid in AI-zoekmachines (GEO). Status: in ontwikkeling.
+
+### Mobiliteit & Telematica
+- [FleetTrack Holland](https://www.fleettrackholland.nl): GPS-tracking en
+  ritregistratie voor het mkb met een OBD-tracker of accutracker, maandelijks
+  opzegbaar.
+
+### Wonen & Verbouwen
+- [Keuken in Beeld](https://keukeninbeeld.nl): gratis AI-visualisatie van je
+  nieuwe keuken met richtprijs, daarna offertes van maximaal drie
+  keukenspecialisten in je regio.
+- [Alles in Renovatie](https://allesinrenovatie.nl): renovatie- en
+  verbouwingswerkzaamheden in Rotterdam, van ontwerp tot oplevering.
+
+### Platforms & Bemiddeling
+- [Zoekeen](https://zoekeen.nl): vertel wat je zoekt, Zoekeen vindt één
+  passende aanbieder in jouw regio. Gratis voor zoekers.
+
+### Reizen & Toerisme
+- [Trip & Tick](https://tripandtick.com): ballonvaarten, hotels, tours en
+  pakketreizen in Cappadocië (Turkije) met transparante prijzen.
 
 ## Innovatieprojecten
 
@@ -23,6 +48,6 @@
 
 ## Contact
 
-- E-mail: info@4menterprise.nl
+- E-mail moederbedrijf: info@4menterprise.nl
 - Locatie: Rotterdam, Nederland
 - KvK: 88606902
