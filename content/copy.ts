@@ -1,78 +1,84 @@
+import { actieveBedrijven, divisies } from './groep';
+
+const pad = (n: number) => String(n).padStart(2, '0');
+
 export const hero = {
-  eyebrow: '4M ENTERPRISE — ROTTERDAM — KVK 88606902',
-  h1: 'Ik bouw bedrijven in Rotterdam.',
+  eyebrow: '4M ENTERPRISE — ONDERNEMERSGROEP — ROTTERDAM',
+  h1: 'Eén groep. Elk bedrijf lost één probleem op.',
   subline:
-    'Van AI-agents tot laadinfrastructuur. 4M Enterprise is het dak boven alles wat ik bouw: twee bedrijven, twee innovatieprojecten, één ingenieur.',
-  primaryCta: { label: 'Bekijk de bedrijven', href: '#ventures' },
+    'Van gevelreclame tot AI-receptionisten, van GPS-tracking tot keukenvisualisatie. 4M Enterprise is het moederbedrijf boven een groep gespecialiseerde bedrijven — met één aanspreekpunt in Rotterdam.',
+  primaryCta: { label: 'Bekijk de groep', href: '#groep' },
   secondaryCta: { label: 'Neem contact op', href: '#contact' },
   stats: [
-    { value: '02', label: 'Bedrijven' },
-    { value: '02', label: 'Innovatieprojecten' },
-    { value: '01', label: 'KvK-inschrijving' },
+    { value: pad(actieveBedrijven.length), label: 'Actieve bedrijven' },
+    { value: pad(divisies.length), label: 'Divisies' },
+    { value: '2012', label: 'Eerste bedrijf' },
     { value: '24/7', label: 'AI-agents actief' },
   ],
 } as const;
 
+export const groepIntro = {
+  eyebrow: 'DE GROEP',
+  h2: 'Gespecialiseerde bedrijven, één moederbedrijf.',
+  intro:
+    'Elk bedrijf heeft een eigen vak, een eigen site en een eigen klantenkring. Wat ze delen: dezelfde ondernemer, dezelfde software-ruggengraat en dezelfde eis — aantoonbaar werk leveren.',
+  alleLabel: 'Alle bedrijven',
+} as const;
+
 export const verhaal = {
-  eyebrow: 'HET VERHAAL',
-  h2: 'Eén ingenieur, meerdere projecten.',
+  eyebrow: 'OVER 4M ENTERPRISE',
+  h2: 'Van reclamebureau tot ondernemersgroep.',
   paragraphs: [
-    'Ik ben Mustafa Doğan, computer engineer en ondernemer in Rotterdam. 4M Enterprise is geen holding met een kantoorpand en een managementlaag — het is de naam boven mijn werk. Eén KvK-inschrijving, één verantwoordelijke, meerdere projecten.',
-    'De rode draad is software die werk uit handen neemt. Met AanloopAI zet ik AI-receptionisten in die voor ondernemers de telefoon en WhatsApp afhandelen, dag en nacht. Leads worden gekwalificeerd en direct doorgestuurd — als maandelijkse dienst, van implementatie tot beheer.',
-    'PiekAI, nu in ontwikkeling, pakt de volgende verschuiving: bedrijven vindbaar maken in AI-zoekmachines en -assistenten, voor groeibedrijven die verder kijken dan de klassieke zoekmachine.',
-    'En daarnaast onderzoek ik wat er hierna komt: laadpunten in straatverlichting, automatische schadedetectie na een aanrijding. Dezelfde aanpak in elk project: eerst analyseren, dan bouwen, dan bewijzen. Vanuit Rotterdam — waar je aan een half woord genoeg hebt.',
+    '4M Enterprise is het moederbedrijf van Mustafa Doğan, computer engineer en ondernemer in Rotterdam. Het begon in 2012 met Alfa Reclame: ontwerpen, produceren en monteren met één Rotterdams team. Dat vak — iets fysieks maken dat werkt — is nog steeds de basis.',
+    'Daaruit groeide een groep. FleetTrack Holland bracht GPS-tracking zonder lange contracten naar het mkb. AanloopAI zet AI-receptionisten in die dag en nacht de telefoon en WhatsApp opnemen. Keuken in Beeld, Alles in Renovatie en Zoekeen helpen mensen kiezen en verbouwen, en Trip & Tick maakt reizen in Cappadocië transparant.',
+    'Wat de bedrijven verbindt, is één ruggengraat: gedeelde software, gedeelde kennis van vindbaarheid in Google én in AI-zoekmachines, en één werkwijze. Eerst analyseren, dan bouwen, dan bewijzen.',
   ],
   datasheet: {
     title: 'Datasheet',
     rows: [
-      { key: 'Naam', value: 'Mustafa Doğan' },
-      { key: 'Rol', value: 'Oprichter & ingenieur' },
+      { key: 'Moederbedrijf', value: '4M Enterprise' },
+      { key: 'Oprichter', value: 'Mustafa Doğan' },
       { key: 'Opleiding', value: 'BSc Computer Engineering' },
       { key: 'Basis', value: 'Rotterdam, Nederland' },
       { key: 'KvK', value: '88606902' },
-      { key: 'Bedrijven', value: '2' },
-      { key: 'R&D-projecten', value: '2' },
+      { key: 'Actieve bedrijven', value: String(actieveBedrijven.length) },
+      { key: 'Divisies', value: String(divisies.length) },
+      { key: 'Sinds', value: '2012' },
     ],
   },
   traject: {
-    title: 'Het traject',
+    title: 'Hoe de groep groeide',
     steps: [
       {
-        title: 'AI-agents in productie',
-        body: 'AanloopAI is actief: AI-receptionisten die 24/7 telefoon en WhatsApp afhandelen voor het Nederlandse mkb.',
+        title: 'Het vak: reclame maken',
+        body: 'Alfa Reclame (sinds 2012): ontwerp, productie en montage van gevel-, licht- en autoreclame in Rotterdam.',
       },
       {
-        title: 'Vindbaarheid in het AI-tijdperk',
-        body: 'PiekAI is in ontwikkeling: zichtbaarheid in AI-zoekmachines en -assistenten (GEO) voor groeibedrijven.',
+        title: 'Van product naar dienst',
+        body: 'FleetTrack Holland: GPS-tracking als maandelijkse dienst — opzegbaar, zelf te installeren.',
       },
       {
-        title: 'Laadinfrastructuur',
-        body: 'Conceptfase: projectvoorstel voor laadpunten in bestaande straatverlichting, gericht op Gemeente Rotterdam.',
+        title: 'AI in productie',
+        body: 'AanloopAI: AI-receptionisten en automatisering die 24/7 draaien voor het Nederlandse mkb.',
       },
       {
-        title: 'Schadedetectie',
-        body: 'R&D: computer vision die voertuigschade na een aanrijding detecteert, lokaliseert en classificeert.',
+        title: 'Platforms die matchen',
+        body: 'Keuken in Beeld, Zoekeen, Alles in Renovatie en Trip & Tick: van keuze tot uitvoering, transparant.',
       },
     ],
   },
-} as const;
-
-export const venturesIntro = {
-  eyebrow: 'DE BEDRIJVEN',
-  h2: 'Twee bedrijven, één aanpak.',
-  intro: 'Elk bedrijf lost één concreet probleem op voor Nederlandse ondernemers.',
 } as const;
 
 export const innovatieIntro = {
   eyebrow: 'INNOVATIE',
   h2: 'Wat er hierna komt.',
   intro:
-    'Naast de bedrijven werk ik aan twee projecten op het snijvlak van mobiliteit en AI. Eerlijk over de status: dit is onderzoek en ontwikkeling, geen verkooppraatje.',
+    'Naast de bedrijven werkt de groep aan twee projecten op het snijvlak van mobiliteit en AI. Eerlijk over de status: dit is onderzoek en ontwikkeling, geen verkooppraatje.',
 } as const;
 
 export const werkwijze = {
   eyebrow: 'WERKWIJZE',
-  h2: 'Hoe ik werk.',
+  h2: 'Wat elk bedrijf van de groep deelt.',
   principles: [
     {
       title: 'Eerst analyseren, dan bouwen.',
@@ -80,11 +86,11 @@ export const werkwijze = {
     },
     {
       title: 'Bewijzen, niet beloven.',
-      body: 'Een functie is pas af als die aantoonbaar werkt. Dat geldt voor software, voor AI-agents en voor deze site.',
+      body: 'Een dienst is pas af als die aantoonbaar werkt. Dat geldt voor een lichtbak, een tracker, een AI-agent en voor deze site.',
     },
     {
-      title: 'Eén verantwoordelijke.',
-      body: 'Alles onder één KvK, één aanspreekpunt. Geen lagen, geen doorverwijzen.',
+      title: 'Eén aanspreekpunt.',
+      body: 'Werk je met meerdere bedrijven uit de groep? Dan heb je toch één contactpersoon. Geen lagen, geen doorverwijzen.',
     },
     {
       title: 'Eerlijk over status.',
@@ -95,16 +101,17 @@ export const werkwijze = {
 
 export const contact = {
   eyebrow: 'CONTACT',
-  h2: 'Praten over een project?',
-  body: 'Voor gemeenten, partners en ondernemers: één e-mail is genoeg. Ik antwoord zelf.',
+  h2: 'Eén aanspreekpunt voor de hele groep.',
+  body: 'Voor partners, gemeenten, investeerders en klanten die met meerdere bedrijven werken: mail het moederbedrijf. Voor een offerte of vraag over één dienst kun je ook direct naar het bedrijf zelf.',
   buttonLabel: 'Mail naar info@4menterprise.nl',
+  direktTitel: 'Direct naar een bedrijf',
   subline: 'Rotterdam · KvK 88606902',
 } as const;
 
 export const footer = {
-  left: '4M Enterprise — Rotterdam',
+  pitch: 'Moederbedrijf van een groep gespecialiseerde bedrijven, gevestigd in Rotterdam.',
+  groepTitel: 'Bedrijven van 4M Enterprise',
   kvk: 'KvK 88606902',
-  links: [{ label: 'aanloopai.nl', url: 'https://aanloopai.nl' }],
   privacyLabel: 'Privacy',
   bottom: (year: number) => `© ${year} 4M Enterprise. Gebouwd in Rotterdam.`,
 } as const;

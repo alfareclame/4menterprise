@@ -5,7 +5,7 @@ export default function Verhaal() {
   return (
     <section id="verhaal" className="border-t border-lijn py-[clamp(4rem,10vw,8rem)]">
       <div className="mx-auto max-w-[1200px] px-6">
-        <SectionHeading index="01" eyebrow={verhaal.eyebrow} title={verhaal.h2} />
+        <SectionHeading index="02" eyebrow={verhaal.eyebrow} title={verhaal.h2} />
         {/* FOTO-SLOT: portret M — wordt later aangeleverd */}
         <div className="mt-10 grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div className="max-w-[44rem] space-y-6">

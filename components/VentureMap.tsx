@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { bedrijvenVan, divisies } from '@/content/groep';
 
 interface Branch {
   id: string;
@@ -9,29 +10,39 @@ interface Branch {
   href: string | null;
 }
 
+// organigram: moederbedrijf → zes divisies, plus R&D als stippellijn
 const BRANCHES: Branch[] = [
-  { id: 'aanloopai', label: 'AANLOOPAI', dashed: false, href: '#ventures' },
-  { id: 'piekai', label: 'PIEKAI', dashed: false, href: '#ventures' },
-  { id: 'laadpunten', label: 'LAADPUNTEN', dashed: true, href: null },
-  { id: 'schadedetectie', label: 'SCHADEDETECTIE', dashed: true, href: null },
+  ...divisies.map((divisie) => ({
+    id: divisie.id,
+    label: `${divisie.kort.toUpperCase()} · ${String(bedrijvenVan(divisie.id).length).padStart(2, '0')}`,
+    dashed: false,
+    href: `#divisie-${divisie.id}`,
+  })),
+  { id: 'rnd', label: 'R&D · 02', dashed: true, href: '#innovatie' },
 ];
 
-// orthogonale "circuit-trace" routing met 45°-chamfers, vanaf de node (90,240)
-const DESKTOP_PATHS = [
-  'M116 240 H178 L190 228 V112 L202 100 H400',
-  'M116 240 H208 L220 228 V202 L232 190 H400',
-  'M116 240 H238 L250 252 V278 L262 290 H400',
-  'M116 240 H268 L280 252 V368 L292 380 H400',
-];
-const DESKTOP_Y = [100, 190, 290, 380];
+// orthogonale "circuit-trace" routing met 45°-chamfers, vanaf de node (90,240).
+// Buitenste takken krijgen de binnenste stam, zodat lijnen elkaar nooit kruisen.
+const CENTER = 240;
+const MID = (BRANCHES.length - 1) / 2;
+const DESKTOP_Y = BRANCHES.map((_, index) => CENTER + (index - MID) * 60);
+const DESKTOP_PATHS = DESKTOP_Y.map((y, index) => {
+  if (y === CENTER) return `M116 ${CENTER} H400`;
+  const x = 150 + (MID - Math.abs(index - MID)) * 26;
+  const dir = y < CENTER ? -1 : 1;
+  return `M116 ${CENTER} H${x} L${x + 12} ${CENTER + dir * 12} V${y - dir * 12} L${x + 24} ${y} H400`;
+});
 
 // mobiel: vereenvoudigde verticale routing — node boven, ladder eronder
-const MOBILE_Y = [150, 240, 330, 420];
-const MOBILE_TRUNK_SOLID = 'M48 70 V240';
-const MOBILE_TRUNK_DASHED = 'M48 240 V420';
+const MOBILE_Y = BRANCHES.map((_, index) => 112 + index * 52);
+const LAST_SOLID_Y = MOBILE_Y[BRANCHES.length - 2];
+const MOBILE_TRUNK_SOLID = `M48 70 V${LAST_SOLID_Y}`;
+const MOBILE_TRUNK_DASHED = `M48 ${LAST_SOLID_Y} V${MOBILE_Y[BRANCHES.length - 1]}`;
+const MOBILE_HEIGHT = MOBILE_Y[BRANCHES.length - 1] + 30;
 
-const ARIA_LABEL =
-  'Schema: één centrale node (M) met vier vertakkingen — AanloopAI (actief) en PiekAI (in ontwikkeling), plus Laadpunten en Schadedetectie (in onderzoek)';
+const ARIA_LABEL = `Organigram: 4M Enterprise als moederbedrijf met ${divisies.length} divisies — ${divisies
+  .map((d) => d.naam)
+  .join(', ')} — plus innovatie (R&D)`;
 
 export default function VentureMap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -152,17 +163,17 @@ export default function VentureMap() {
           y={246}
           textAnchor="middle"
           className="font-mono"
-          fontSize={16}
+          fontSize={15}
           fontWeight={500}
           fill="var(--color-wit)"
         >
-          M
+          4M
         </text>
       </svg>
 
       {/* mobiel: volle breedte onder de hero-tekst, verticale routing */}
       <svg
-        viewBox="0 0 360 470"
+        viewBox={`0 0 360 ${MOBILE_HEIGHT}`}
         role="img"
         aria-label={ARIA_LABEL}
         className="w-full md:hidden"
@@ -207,11 +218,11 @@ export default function VentureMap() {
           y={53}
           textAnchor="middle"
           className="font-mono"
-          fontSize={14}
+          fontSize={13}
           fontWeight={500}
           fill="var(--color-wit)"
         >
-          M
+          4M
         </text>
       </svg>
     </div>

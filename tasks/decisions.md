@@ -50,3 +50,12 @@ _Every deviation from spec, with one-line rationale._
   ]
 }
 ```
+
+## 2026-10-14 — Holding-herpositionering (draait #0 terug)
+
+9. **M's nieuwe instructie overrulet #0:** 4menterprise.nl wordt het moederbedrijf van de hele groep. Alfa Reclame, FleetTrack Holland, Keuken in Beeld, Alles in Renovatie, Zoekeen, AanloopAI, Trip & Tick (+ PiekAI in ontwikkeling) staan nu op de site, ingedeeld in zes divisies. Bron van waarheid: `content/groep.ts` (alle "feiten" per bedrijf op 2026-10-14 met curl op de eigen live site gecontroleerd — geen cijfers toevoegen die daar niet staan).
+10. **`Ventures`/`VentureCard`/`ventures.ts` vervangen door `Groep`/`BedrijfCard`/`groep.ts`.** Groep gebruikt `domMax` (layout-animaties voor filter-indicator en divisie-overgangen) — bewuste ~+25 kB JS voor het filter.
+11. **Organigram in de hero** wordt uit `groep.ts` gegenereerd (6 divisies + R&D-stippellijn); elke tak linkt naar `#divisie-<id>`, wat het filter in `Groep` zet.
+12. **Zuster-links met `rel="noopener"` (zonder `noreferrer`):** de groepssites mogen 4menterprise.nl als verwijzer zien.
+13. **Nieuw token `--color-kraan-licht` (#F28A4B):** kraan op havennacht haalt ~4.4:1 — te krap voor 11px-labels in de donkere footer.
+14. **Alles in Renovatie:** live site is (nog) de oude renovatiesite; tekst bewust neutraal ("renovatie en verbouwing in Rotterdam") zodat die klopt met zowel de huidige site als de geplande vernieuwing.

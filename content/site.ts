@@ -8,13 +8,13 @@ export const site = {
   founder: 'Mustafa Doğan',
   founderTitle: 'Ondernemer & Computer Engineer (BSc)',
   meta: {
-    title: '4M Enterprise | Ondernemer & ingenieur in Rotterdam — Mustafa Doğan',
+    title: '4M Enterprise | Ondernemersgroep uit Rotterdam — reclame, AI, mobiliteit & wonen',
     description:
-      'Het ondernemingsmerk van Mustafa Doğan in Rotterdam: AI-agents met AanloopAI, vindbaarheid met PiekAI en innovatie in laadinfrastructuur en schadedetectie.',
+      '4M Enterprise is het Rotterdamse moederbedrijf van Alfa Reclame, AanloopAI, FleetTrack Holland, Keuken in Beeld, Alles in Renovatie, Zoekeen en Trip & Tick: zes divisies, één aanspreekpunt.',
   },
   nav: [
-    { label: 'Het verhaal', href: '#verhaal' },
-    { label: 'De bedrijven', href: '#ventures' },
+    { label: 'De groep', href: '#groep' },
+    { label: 'Over 4M', href: '#verhaal' },
     { label: 'Innovatie', href: '#innovatie' },
     { label: 'Werkwijze', href: '#werkwijze' },
     { label: 'Contact', href: '#contact' },
