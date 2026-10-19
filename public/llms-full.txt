@@ -1,0 +1,79 @@
+# 4M Enterprise (volledig)
+
+> 4M Enterprise is het moederbedrijf van een groep gespecialiseerde bedrijven,
+> gevestigd in Rotterdam, Nederland (KvK 88606902). Oprichter: Mustafa Doğan,
+> computer engineer (BSc) en ondernemer. Eerste bedrijf: Alfa Reclame (2012).
+> Werkwijze: eerst analyseren, dan bouwen, dan bewijzen.
+
+## Bedrijven van de groep, per divisie
+
+### Reclame & Signing
+- [Alfa Reclame](https://alfareclame.nl): reclamebureau in Rotterdam sinds 2012.
+  Ontwerp, productie en montage van gevelreclame, lichtreclame, doosletters,
+  raambelettering, autoreclame en reclameborden.
+
+### AI & Automatisering
+- [AanloopAI](https://aanloopai.nl): AI-receptioniste die 24/7 telefoon en
+  WhatsApp opneemt, leads kwalificeert en afspraken boekt; daarnaast websites
+  en maatwerk-automatisering voor het Nederlandse mkb.
+- PiekAI: vindbaarheid in AI-zoekmachines (GEO). Status: in ontwikkeling.
+
+### Mobiliteit & Telematica
+- [FleetTrack Holland](https://www.fleettrackholland.nl): GPS-tracking en
+  ritregistratie voor het mkb met een OBD-tracker of accutracker, maandelijks
+  opzegbaar.
+
+### Wonen & Verbouwen
+- [Keuken in Beeld](https://keukeninbeeld.nl): gratis AI-visualisatie van je
+  nieuwe keuken met richtprijs, daarna offertes van maximaal drie
+  keukenspecialisten in je regio.
+- [Alles in Renovatie](https://allesinrenovatie.nl): renovatie- en
+  verbouwingswerkzaamheden in Rotterdam, van ontwerp tot oplevering.
+
+### Platforms & Bemiddeling
+- [Zoekeen](https://zoekeen.nl): vertel wat je zoekt, Zoekeen vindt één
+  passende aanbieder in jouw regio. Gratis voor zoekers.
+
+### Reizen & Toerisme
+- [Trip & Tick](https://tripandtick.com): ballonvaarten, hotels, tours en
+  pakketreizen in Cappadocië (Turkije) met transparante prijzen.
+
+## Innovatieprojecten
+
+- Laadpunten via straatverlichting: projectvoorstel voor oplaadpunten voor
+  elektrische voertuigen in bestaande lantaarnpalen, gericht op samenwerking
+  met Gemeente Rotterdam. Status: conceptfase.
+- Automatische schadedetectie: AI/computer-vision-systeem dat voertuigschade
+  na een aanrijding detecteert en classificeert. Status: R&D.
+
+## Contact
+
+- E-mail moederbedrijf: info@4menterprise.nl
+- Locatie: Rotterdam, Nederland
+- KvK: 88606902
+
+## Over deze site
+
+- Bijgewerkt op: 2026-10-19
+- Taal: Nederlands
+- Overzicht (kort): https://4menterprise.nl/llms.txt
+- Privacyverklaring: https://4menterprise.nl/privacy/
+- Over 4M Enterprise: https://4menterprise.nl/#verhaal
+
+## Hoe de groep groeide
+
+- Het vak: Alfa Reclame (sinds 2012) - ontwerp, productie en montage van gevel-, licht- en autoreclame in Rotterdam.
+- Van product naar dienst: FleetTrack Holland - GPS-tracking als maandelijkse dienst, opzegbaar, zelf te installeren.
+- AI in productie: AanloopAI - AI-receptionisten en automatisering die 24/7 draaien voor het Nederlandse mkb.
+- Platforms die matchen: Keuken in Beeld, Zoekeen, Alles in Renovatie en Trip & Tick.
+
+## Veelgestelde vragen
+
+### Wat is 4M Enterprise?
+Het Rotterdamse moederbedrijf (KvK 88606902) van een groep gespecialiseerde bedrijven in zes divisies: Reclame & Signing, AI & Automatisering, Mobiliteit & Telematica, Wonen & Verbouwen, Platforms & Bemiddeling en Reizen & Toerisme.
+
+### Wie is de oprichter?
+Mustafa Doğan, computer engineer (BSc) en ondernemer in Rotterdam. Het eerste bedrijf, Alfa Reclame, startte in 2012.
+
+### Hoe neem ik contact op?
+Mail het moederbedrijf via info@4menterprise.nl. Voor een offerte of vraag over een enkele dienst kun je direct naar het betreffende bedrijf.

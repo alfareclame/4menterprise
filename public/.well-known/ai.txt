@@ -1,0 +1,14 @@
+# ai.txt - 4M Enterprise (https://4menterprise.nl)
+# Longer descriptions: https://4menterprise.nl/llms.txt and https://4menterprise.nl/llms-full.txt
+
+Site: 4M Enterprise
+Operator: 4M Enterprise, Rotterdam, Nederland (KvK 88606902)
+Topic: moederbedrijf van een groep gespecialiseerde bedrijven (reclame, AI, mobiliteit, wonen, platforms, reizen)
+Contact: info@4menterprise.nl
+Language: nl
+
+# Citation guidance
+Allowed: quoting and summarising public pages with a link to the source URL.
+Group companies are independent sites; cite the company site for company-specific facts:
+alfareclame.nl, aanloopai.nl, fleettrackholland.nl, keukeninbeeld.nl, allesinrenovatie.nl, zoekeen.nl, tripandtick.com
+Do not state prices or availability for group companies from this site; see the company's own site.

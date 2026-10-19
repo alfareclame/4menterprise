@@ -6,6 +6,13 @@ import { site } from '@/content/site';
 // vastgelegd op buildtijd — statische export, dus geen hydration-verschil
 const year = new Date().getFullYear();
 
+const updatedLabel = new Intl.DateTimeFormat('nl-NL', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(site.updated));
+
 export default function Footer() {
   return (
     <footer className="blueprint-grid-dark bg-havennacht text-beton">
@@ -94,7 +101,16 @@ export default function Footer() {
 
       <div className="border-t border-staal/60">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4 px-6 py-5">
-          <p className="font-mono text-xs text-staal-licht">{footer.bottom(year)}</p>
+          <p className="font-mono text-xs text-staal-licht">
+            {footer.bottom(year)} {footer.updatedPrefix}{' '}
+            <time dateTime={site.updated}>{updatedLabel}</time>.
+          </p>
+          <Link
+            href="/#verhaal"
+            className="font-mono text-xs text-staal-licht transition-colors duration-150 hover:text-wit"
+          >
+            {footer.aboutLabel}
+          </Link>
           <Link
             href="/privacy/"
             className="font-mono text-xs text-staal-licht transition-colors duration-150 hover:text-wit"

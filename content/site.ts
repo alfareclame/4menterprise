@@ -4,6 +4,7 @@ export const site = {
   url: 'https://4menterprise.nl',
   email: 'info@4menterprise.nl',
   kvk: '88606902',
+  updated: '2026-10-19', // ISO; zichtbaar in footer + dateModified in JSON-LD
   city: 'Rotterdam',
   founder: 'Mustafa Doğan',
   founderTitle: 'Ondernemer & Computer Engineer (BSc)',
