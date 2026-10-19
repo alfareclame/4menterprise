@@ -56,6 +56,16 @@ export function buildJsonLd() {
         subOrganization: SUB_ORGANIZATIONS,
       },
       {
+        '@type': 'WebPage',
+        '@id': `${site.url}/#webpage`,
+        url: `${site.url}/`,
+        name: site.meta.title,
+        inLanguage: 'nl-NL',
+        isPartOf: { '@id': WEBSITE_ID },
+        about: { '@id': ORG_ID },
+        dateModified: site.updated,
+      },
+      {
         '@type': 'WebSite',
         '@id': WEBSITE_ID,
         name: site.brand,

@@ -113,6 +113,8 @@ export const footer = {
   groepTitel: 'Bedrijven van 4M Enterprise',
   kvk: 'KvK 88606902',
   privacyLabel: 'Privacy',
+  aboutLabel: 'Over 4M Enterprise',
+  updatedPrefix: 'Bijgewerkt op',
   bottom: (year: number) => `© ${year} 4M Enterprise. Gebouwd in Rotterdam.`,
 } as const;
 
