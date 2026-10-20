@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/check-groep.mjs",
+    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/check-groep.mjs && node scripts/check-geo.mjs",
     "og": "node scripts/generate-og.mjs",
     "lint": "next lint"
   },

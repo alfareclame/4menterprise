@@ -1,16 +1,31 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { privacy } from '@/content/copy';
+import { site } from '@/content/site';
+import { PRIVACY_UPDATED, buildPageJsonLd } from '@/lib/jsonld';
+
+const TITLE = 'Privacyverklaring | 4M Enterprise';
+const DESCRIPTION =
+  'Privacyverklaring van 4M Enterprise (Rotterdam, KvK 88606902): geen cookies, geen trackers, alleen e-mailcontact.';
 
 export const metadata: Metadata = {
-  title: 'Privacyverklaring | 4M Enterprise',
-  description:
-    'Privacyverklaring van 4M Enterprise (Rotterdam, KvK 88606902): geen cookies, geen trackers, alleen e-mailcontact.',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: '/privacy' },
+  openGraph: { type: 'website', locale: 'nl_NL', siteName: site.brand, title: TITLE, description: DESCRIPTION, url: '/privacy' },
 };
 
 export default function PrivacyPage() {
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(
+          buildPageJsonLd({ path: '/privacy/', name: TITLE, description: DESCRIPTION, dateModified: PRIVACY_UPDATED }),
+        ),
+      }}
+    />
     <main id="main" className="mx-auto max-w-[44rem] px-6 py-[clamp(4rem,10vw,7rem)]">
       <Link
         href="/"
@@ -30,5 +45,6 @@ export default function PrivacyPage() {
       ))}
       <p className="mt-12 font-mono text-xs text-staal">{privacy.lastUpdated}</p>
     </main>
+    </>
   );
 }
