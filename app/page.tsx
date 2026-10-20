@@ -7,6 +7,7 @@ import Innovatie from '@/components/Innovatie';
 import Werkwijze from '@/components/Werkwijze';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { homePageJsonLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd()) }} />
       <Nav />
       <main id="main">
         <Hero />

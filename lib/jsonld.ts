@@ -25,23 +25,23 @@ const ROTTERDAM = {
   addressCountry: 'NL',
 };
 
+const PRIVACY_UPDATED = '2026-06-12'; // datum van de huidige privacytekst (git: app/privacy/page.tsx)
+
+const AUTHOR = { '@type': 'Organization', '@id': ORG_ID, name: site.brand, url: site.url };
+
+// Entity-disambiguatie: de merknaam lijkt op DJI Matrice 4 Enterprise (drone), geen verband.
+const DISAMBIGUATION =
+  'Nederlandse ondernemersgroep en moederbedrijf in Rotterdam (KvK 88606902); geen verband met DJI Enterprise-drones.';
+
 export function buildJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Person',
-        '@id': PERSON_ID,
-        name: site.founder,
-        jobTitle: 'Ondernemer & Computer Engineer',
-        address: ROTTERDAM,
-        worksFor: { '@id': ORG_ID },
-        sameAs: SAME_AS,
-      },
-      {
         '@type': 'Organization',
         '@id': ORG_ID,
         name: site.brand,
+        alternateName: ['4menterprise', '4menterprise.nl'],
         url: site.url,
         logo: `${site.url}/icon.svg`,
         founder: { '@id': PERSON_ID },
@@ -52,18 +52,19 @@ export function buildJsonLd() {
         },
         email: site.email,
         description: site.meta.description,
+        disambiguatingDescription: DISAMBIGUATION,
+        knowsAbout: divisies.map((d) => d.naam),
         address: ROTTERDAM,
         subOrganization: SUB_ORGANIZATIONS,
       },
       {
-        '@type': 'WebPage',
-        '@id': `${site.url}/#webpage`,
-        url: `${site.url}/`,
-        name: site.meta.title,
-        inLanguage: 'nl-NL',
-        isPartOf: { '@id': WEBSITE_ID },
-        about: { '@id': ORG_ID },
-        dateModified: site.updated,
+        '@type': 'Person',
+        '@id': PERSON_ID,
+        name: site.founder,
+        jobTitle: 'Ondernemer & Computer Engineer',
+        address: ROTTERDAM,
+        worksFor: { '@id': ORG_ID },
+        sameAs: SAME_AS,
       },
       {
         '@type': 'WebSite',
@@ -76,3 +77,34 @@ export function buildJsonLd() {
     ],
   };
 }
+
+interface PageInput {
+  path: string; // '/' of '/privacy/'
+  name: string;
+  description: string;
+  dateModified: string;
+}
+
+// Per-pagina WebPage: description = meta description, echte dateModified, Organization als auteur.
+export function buildPageJsonLd({ path, name, description, dateModified }: PageInput) {
+  const url = `${site.url}${path}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: 'nl-NL',
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': ORG_ID },
+    author: AUTHOR,
+    publisher: { '@id': ORG_ID },
+    dateModified,
+  };
+}
+
+export const homePageJsonLd = () =>
+  buildPageJsonLd({ path: '/', name: site.meta.title, description: site.meta.description, dateModified: site.updated });
+
+export { PRIVACY_UPDATED };
