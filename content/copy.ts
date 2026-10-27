@@ -76,6 +76,12 @@ export const innovatieIntro = {
     'Naast de bedrijven werkt de groep aan twee projecten op het snijvlak van mobiliteit en AI. Eerlijk over de status: dit is onderzoek en ontwikkeling, geen verkooppraatje.',
 } as const;
 
+/** Buttons on the film captions: each one jumps to the section the footage is about. */
+export const filmCta = {
+  divisie: 'Bekijk de bedrijven',
+  innovatie: 'Bekijk de projecten',
+} as const;
+
 export const werkwijze = {
   eyebrow: 'WERKWIJZE',
   h2: 'Wat elk bedrijf van de groep deelt.',

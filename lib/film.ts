@@ -90,14 +90,16 @@ export type FilmBeat =
   | { kind: 'divisie'; divisie: string; at: readonly [number, number] }
   | { kind: 'innovatie'; at: readonly [number, number] };
 
+// Each caption holds for as long as its footage is on screen (checked on a 9x5 contact sheet of
+// film-v3): a caption that only flashed by was missed, and its button could not be clicked.
 export const filmBeats: readonly FilmBeat[] = [
-  { kind: 'divisie', divisie: 'reclame', at: [inLeg(0, 0.7), inLeg(1, 0.3)] },
-  { kind: 'divisie', divisie: 'ai', at: [inLeg(1, 0.6), inLeg(2, 0.3)] },
-  { kind: 'divisie', divisie: 'mobiliteit', at: [inLeg(2, 0.6), inLeg(3, 0.3)] },
-  { kind: 'divisie', divisie: 'wonen', at: [inLeg(3, 0.7), inLeg(4, 0.95)] },
-  { kind: 'divisie', divisie: 'platforms', at: [inLeg(5, 0.75), inLeg(6, 0.15)] },
-  { kind: 'innovatie', at: [inLeg(6, 0.65), inLeg(7, 0.25)] },
-  { kind: 'divisie', divisie: 'reizen', at: [inLeg(7, 0.75), inLeg(8, 0.3)] },
+  { kind: 'divisie', divisie: 'reclame', at: [inLeg(0, 0.62), inLeg(1, 0.42)] },
+  { kind: 'divisie', divisie: 'ai', at: [inLeg(1, 0.5), inLeg(2, 0.4)] },
+  { kind: 'divisie', divisie: 'mobiliteit', at: [inLeg(2, 0.5), inLeg(3, 0.6)] },
+  { kind: 'divisie', divisie: 'wonen', at: [inLeg(3, 0.68), inLeg(4, 0.95)] },
+  { kind: 'divisie', divisie: 'platforms', at: [inLeg(5, 0.6), inLeg(6, 0.22)] },
+  { kind: 'innovatie', at: [inLeg(6, 0.5), inLeg(7, 0.3)] },
+  { kind: 'divisie', divisie: 'reizen', at: [inLeg(7, 0.65), inLeg(8, 0.32)] },
 ];
 
 /** The closing block appears here and stays until the film scrolls away. */
