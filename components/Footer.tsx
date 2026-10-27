@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { footer } from '@/content/copy';
 import { bedrijvenVan, divisies, hostname } from '@/content/groep';
@@ -19,13 +20,8 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1200px] gap-12 px-6 pt-16 pb-12 lg:grid-cols-[18rem_1fr]">
         {/* moederbedrijf */}
         <div>
-          <Link href="/" className="inline-flex items-center gap-2" aria-label="4M Enterprise — home">
-            <span className="inline-flex items-center justify-center rounded-[2px] border-[1.5px] border-wit px-1.5 py-0.5 font-display text-sm font-extrabold leading-none text-wit">
-              4M
-            </span>
-            <span className="font-mono text-sm font-medium tracking-[0.12em] text-wit">
-              Enterprise
-            </span>
+          <Link href="/" className="inline-flex items-center" aria-label="4M Enterprise — home">
+            <Image src="/logo-wit.png" alt="4M Enterprise — Research & Development" width={1200} height={259} className="h-10 w-auto" />
           </Link>
           <p className="mt-5 max-w-[18rem] text-[0.95rem] leading-relaxed text-staal-licht">
             {footer.pitch}

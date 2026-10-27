@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { site } from '@/content/site';
@@ -77,13 +78,8 @@ export default function Nav() {
         aria-label="Hoofdnavigatie"
         className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-6"
       >
-        <Link href="/" className="flex items-center gap-2" aria-label="4M Enterprise — home">
-          <span className="inline-flex items-center justify-center rounded-[2px] border-[1.5px] border-havennacht px-1.5 py-0.5 font-display text-sm font-extrabold leading-none">
-            4M
-          </span>
-          <span className="font-mono text-sm font-medium tracking-[0.12em]">
-            Enterprise
-          </span>
+        <Link href="/" className="flex items-center" aria-label="4M Enterprise — home">
+          <Image src="/logo.png" alt="4M Enterprise — Research & Development" width={1200} height={259} priority className="h-9 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
