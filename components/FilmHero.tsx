@@ -123,11 +123,11 @@ export default function FilmHero() {
 
   return (
     <div id="hero" className="relative bg-havennacht">
-      {/* First screen: phones get it in flow above the film; from md it lies over the film's
-          first screen and scrolls away with it. */}
-      <div className="relative z-10 px-6 pb-10 pt-14 md:pointer-events-none md:absolute md:inset-x-0 md:top-0 md:h-[calc(100svh-4rem)] md:p-0">
-        <div className="relative mx-auto md:h-full md:max-w-[1200px]">
-          <div className="max-w-[44rem] md:pointer-events-auto md:absolute md:bottom-[10svh] md:left-6" style={{ textShadow: SHADOW }}>
+      {/* First screen: lies over the film's first screen and scrolls away with it, so the film
+          fills the screen from the first view on phones too. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[calc(100svh-4rem)]">
+        <div className="relative mx-auto h-full md:max-w-[1200px]">
+          <div className="pointer-events-auto absolute bottom-[6svh] left-6 right-6 max-w-[44rem] md:bottom-[10svh]" style={{ textShadow: SHADOW }}>
             <p className="font-mono text-[13px] tracking-[0.14em] text-kraan-licht">{hero.eyebrow}</p>
             <h1 className="mt-5 font-display text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[1.02] text-wit">
               {hero.h1}
@@ -161,7 +161,6 @@ export default function FilmHero() {
           poster={filmPoster}
           src={film.src}
           pace={filmPace}
-          fit={film.phone ? 'contain' : 'cover'}
           maxDpr={film.phone ? 3 : 1.5}
           memoryWindow={film.phone ? 16 : 24}
         />
