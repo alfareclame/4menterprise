@@ -127,13 +127,13 @@ export default function FilmHero() {
           fills the screen from the first view on phones too. */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[calc(100svh-4rem)]">
         <div className="relative mx-auto h-full md:max-w-[1200px]">
-          <div className="pointer-events-auto absolute bottom-[6svh] left-6 right-6 max-w-[44rem] md:bottom-[10svh]" style={{ textShadow: SHADOW }}>
+          <div className="pointer-events-auto absolute bottom-[4svh] left-5 right-5 max-w-[44rem] md:bottom-[10svh] md:left-6 md:right-6" style={{ textShadow: SHADOW }}>
             <p className="font-mono text-[13px] tracking-[0.14em] text-kraan-licht">{hero.eyebrow}</p>
-            <h1 className="mt-5 font-display text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[1.02] text-wit">
+            <h1 className="mt-3 font-display text-[clamp(2.1rem,6vw,5.5rem)] md:mt-5 font-semibold leading-[1.02] text-wit">
               {hero.h1}
             </h1>
-            <p className="mt-6 max-w-[36rem] text-lg text-wit/90">{hero.subline}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-4" style={{ textShadow: 'none' }}>
+            <p className="mt-4 max-w-[36rem] text-base text-wit/90 md:mt-6 md:text-lg">{hero.subline}</p>
+            <div className="mt-6 flex md:mt-8 flex-wrap items-center gap-4" style={{ textShadow: 'none' }}>
               <a href={hero.primaryCta.href} className="btn-primary active:translate-y-px">
                 {hero.primaryCta.label}
               </a>
@@ -141,7 +141,7 @@ export default function FilmHero() {
                 {hero.secondaryCta.label}
               </a>
             </div>
-            <dl className="mt-10 grid max-w-[36rem] grid-cols-4 gap-4 border-t border-wit/20 pt-5">
+            <dl className="mt-10 hidden max-w-[36rem] md:grid grid-cols-4 gap-4 border-t border-wit/20 pt-5">
               {hero.stats.map((s) => (
                 <div key={s.label}>
                   <dt className="sr-only">{s.label}</dt>
