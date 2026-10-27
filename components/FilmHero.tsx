@@ -4,7 +4,7 @@
 // one scrubbed timeline. All copy comes from content/*, so the film never says more than the site.
 import { useMemo, useRef } from 'react';
 import ScrollSequence from '@/components/ScrollSequence';
-import { contact, hero, innovatieIntro } from '@/content/copy';
+import { contact, filmCta, hero, innovatieIntro } from '@/content/copy';
 import { bedrijvenVan, divisies } from '@/content/groep';
 import { innovatieProjecten } from '@/content/innovatie';
 import { site } from '@/content/site';
@@ -24,6 +24,15 @@ import { paceSegments, progressOfFrame } from '@/lib/pace';
 const SHADOW = '0 1px 2px rgb(16 28 40 / 0.6), 0 2px 14px rgb(16 28 40 / 0.5), 0 0 40px rgb(16 28 40 / 0.4)';
 const pad = (n: number) => String(n).padStart(2, '0');
 
+function BeatButton({ href, label }: { href: string; label: string }) {
+  return (
+    <a href={href} className="btn-primary pointer-events-auto mt-7 gap-2 active:translate-y-px" style={{ textShadow: 'none' }}>
+      {label}
+      <span aria-hidden="true">→</span>
+    </a>
+  );
+}
+
 function BeatCaption({ beat }: { beat: FilmBeat }) {
   if (beat.kind === 'innovatie') {
     return (
@@ -39,6 +48,7 @@ function BeatCaption({ beat }: { beat: FilmBeat }) {
             </li>
           ))}
         </ul>
+        <BeatButton href="#innovatie" label={filmCta.innovatie} />
       </>
     );
   }
@@ -62,6 +72,7 @@ function BeatCaption({ beat }: { beat: FilmBeat }) {
         ))}
       </p>
       <p className="mt-5 max-w-[34rem] text-lg text-wit/90">{divisie.omschrijving}</p>
+      <BeatButton href={`#divisie-${divisie.id}`} label={filmCta.divisie} />
     </>
   );
 }
@@ -161,7 +172,7 @@ export default function FilmHero() {
               <div
                 key={i}
                 data-beat
-                className="invisible absolute bottom-[5svh] left-6 right-6 max-w-[40rem] md:bottom-[12svh] md:left-12"
+                className="invisible absolute bottom-[5svh] left-4 right-4 max-w-[40rem] rounded-[3px] border-l-4 border-kraan bg-havennacht/60 p-6 md:bottom-[12svh] md:left-12 md:p-8"
                 style={{ textShadow: SHADOW }}
               >
                 <BeatCaption beat={beat} />
