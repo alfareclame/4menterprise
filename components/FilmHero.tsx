@@ -94,11 +94,16 @@ export default function FilmHero() {
         tl.fromTo(el, { autoAlpha: 0, y: rise }, { autoAlpha: 1, y: 0, duration: ramp }, a);
         tl.to(el, { autoAlpha: 0, y: calm ? 0 : -16, duration: ramp }, b - ramp);
       });
+      // the settle reveal must end by 1: a timeline longer than 1 is squeezed onto the scroll and
+      // every caption above would show early, off the footage it describes
+      const settle = gsap.utils.toArray<HTMLElement>('[data-settle] > *');
+      const settleAt = at(filmSettleFrame);
+      const fit = Math.min(1, (1 - settleAt) / (0.04 + 0.015 * (settle.length - 1)));
       tl.fromTo(
-        '[data-settle] > *',
+        settle,
         { autoAlpha: 0, y: calm ? 0 : 28 },
-        { autoAlpha: 1, y: 0, duration: 0.04, stagger: 0.015, ease: 'power3.out' },
-        at(filmSettleFrame),
+        { autoAlpha: 1, y: 0, duration: 0.04 * fit, stagger: 0.015 * fit, ease: 'power3.out' },
+        settleAt,
       );
       tl.set({}, {}, 1);
     },
