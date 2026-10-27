@@ -21,7 +21,7 @@ export default function Footer() {
         {/* moederbedrijf */}
         <div>
           <Link href="/" className="inline-flex items-center" aria-label="4M Enterprise — home">
-            <Image src="/logo-wit.png" alt="4M Enterprise — Research & Development" width={1200} height={259} className="h-10 w-auto" />
+            <Image src="/logo-wit.png" alt="4M Enterprise — Research & Development" width={1745} height={376} className="h-10 w-auto" />
           </Link>
           <p className="mt-5 max-w-[18rem] text-[0.95rem] leading-relaxed text-staal-licht">
             {footer.pitch}

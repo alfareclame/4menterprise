@@ -79,7 +79,7 @@ export default function Nav() {
         className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-6"
       >
         <Link href="/" className="flex items-center" aria-label="4M Enterprise — home">
-          <Image src="/logo.png" alt="4M Enterprise — Research & Development" width={1200} height={259} priority className="h-9 w-auto" />
+          <Image src="/logo.png" alt="4M Enterprise — Research & Development" width={1745} height={376} priority className="h-9 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
