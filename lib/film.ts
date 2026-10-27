@@ -7,7 +7,7 @@
 //   L2 through the shop window -> counter: phone call + chat on the laptop        (AI & Automatisering)
 //   L3 counter -> man with live GPS map on his phone, van passing outside          (Mobiliteit & Telematica)
 //   L4 phone screen -> tablet in a kitchen under renovation                         (Wonen & Verbouwen)
-//   L5 renovation -> finished kitchen
+//   L5 renovation time-lapse -> finished handleless kitchen, flush built-in appliances
 //   L6 kitchen -> front door, handshake with the tradesman                          (Platforms & Bemiddeling)
 //   L7 street at dusk -> EV charging from a street-lamp post                        (Innovatie)
 //   L8 up through the clouds -> Cappadocia at sunrise, balloons                     (Reizen & Toerisme)
@@ -15,7 +15,7 @@
 import type { PaceSpan } from './pace';
 
 /** Frame folder; rename (film-v3, ...) whenever the footage changes: frames are cached immutable. */
-export const FILM_NAME = 'film-v2';
+export const FILM_NAME = 'film-v3';
 
 /** Frames per leg as fed to film.sh, and the xfade overlap between legs (0.25 s at 24 fps). */
 const LEG_FRAMES = [241, 241, 241, 241, 241, 241, 241, 241, 241] as const;
@@ -66,20 +66,9 @@ export const filmPace: readonly PaceSpan[] = [
   { from: 351, to: 358, weight: 1.5 },
   { from: 544, to: 583, weight: 1.5 },
   { from: 818, to: 865, weight: 1.5 },
-  { from: 1194, to: 1203, weight: 1.5 },
-  { from: 1203, to: 1212, weight: 2 },
-  { from: 1212, to: 1219, weight: 2.5 },
-  { from: 1219, to: 1225, weight: 3 },
-  { from: 1225, to: 1270, weight: 3.5 },
-  { from: 1270, to: 1274, weight: 3 },
-  { from: 1274, to: 1281, weight: 2.5 },
-  { from: 1281, to: 1289, weight: 2 },
-  { from: 1289, to: 1299, weight: 1.5 },
-  { from: 1311, to: 1336, weight: 1.5 },
-  { from: 1336, to: 1355, weight: 2 },
-  { from: 1355, to: 1386, weight: 2.5 },
-  { from: 1386, to: 1400, weight: 2 },
-  { from: 1400, to: 1429, weight: 1.5 },
+  { from: 1224, to: 1291, weight: 1.5 },
+  { from: 1324, to: 1354, weight: 1.5 },
+  { from: 1416, to: 1429, weight: 1.5 },
   { from: 1429, to: 1437, weight: 2 },
   { from: 1437, to: 1454, weight: 1.5 },
   { from: 1516, to: 1549, weight: 1.5 },
