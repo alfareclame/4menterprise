@@ -43,7 +43,7 @@ export function buildJsonLd() {
         name: site.brand,
         alternateName: ['4menterprise', '4menterprise.nl'],
         url: site.url,
-        logo: `${site.url}/icon.svg`,
+        logo: `${site.url}/logo.png`,
         founder: { '@id': PERSON_ID },
         identifier: {
           '@type': 'PropertyValue',
