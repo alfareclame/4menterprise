@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import Hero from '@/components/Hero';
+import FilmHero from '@/components/FilmHero';
 import Verhaal from '@/components/Verhaal';
 import Groep from '@/components/Groep';
 import Innovatie from '@/components/Innovatie';
@@ -19,7 +19,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd()) }} />
       <Nav />
       <main id="main">
-        <Hero />
+        <FilmHero />
         <Groep />
         <Verhaal />
         <Innovatie />

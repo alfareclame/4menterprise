@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { archivo, bricolage, plexMono } from './fonts';
 import { site } from '@/content/site';
 import { buildJsonLd } from '@/lib/jsonld';
+import { LenisProvider } from '@/components/LenisProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function RootLayout({
         >
           Direct naar inhoud
         </a>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );
